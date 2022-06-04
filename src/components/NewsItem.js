@@ -14,11 +14,11 @@ export class NewsItem extends Component {
         return (
             <div className='my-3'>
                 <div className="card">
-                    <span className="position-absolute top-0 translate-right badge  bg-danger">
+                    <span className="position-absolute top-0 translate-right badge  bg-danger" style={{right:0}}>
                         {source}
                         <span className="visually-hidden">Source</span>
                     </span>
-                    <img src={imgUrl ? imgUrl : 'https://images.news18.com/ibnlive/uploads/2022/05/fixed-deposit-165182494116x9.jpg'} className="card-img-top" alt="..." />
+                    <img src={imgUrl ? imgUrl : 'https://via.placeholder.com/300/09f/fff.png'} className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>
                         <p className="card-text">{description}</p>
