@@ -11,21 +11,19 @@ const News = (props) => {
     const [loading, setLoading] = useState(true)
     const [page, setPage] = useState(1)
     const [totalResults, setTotalResults] = useState(0)
-    //document.title = `${this.captitalizeFirstLetter(props.category)} - FreeNews`
-
-
-
+    
     const captitalizeFirstLetter = (string) => {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
     useEffect(() => {
+        document.title = `${captitalizeFirstLetter(props.category)} - FreeNews`
         getDataFromAPI();
     }, [])
 
 
     const getDataFromAPI = async () => {
-        debugger
+       
         props.setProgress(10);
 
         console.log('API get called')
