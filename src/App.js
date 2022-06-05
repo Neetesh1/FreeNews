@@ -11,7 +11,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  HashRouter,
 } from "react-router-dom";
 
 const App = () => {
@@ -38,7 +37,7 @@ const App = () => {
   return (
     <div>
 
-      <HashRouter>
+      <Router>
         <NavBar setCountry={setCountry}  country={country} countriesOptions={countryOptions()} />
         <LoadingBar
           color='#f11946'
@@ -56,7 +55,7 @@ const App = () => {
           <Route exact path="/technology" element={<News setProgress={setProgress} apiKey={apiKey} key="technology" pageSize={pageSize} country={country} category="technology" />} />
 
         </Routes>
-      </HashRouter>
+      </Router>
 
     </div>
   )
